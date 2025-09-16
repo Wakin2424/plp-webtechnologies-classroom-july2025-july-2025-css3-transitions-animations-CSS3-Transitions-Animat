@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather Animator</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!--  Assignment: Bringing Web Pages to Life with CSS & JavaScript -->
+  <!-- Part 1: CSS Animations | Part 2: JS Functions | Part 3: JS + CSS Integration -->
+
+  <main class="dashboard">
+
+    <header class="header">
+      <h1> Weather Animator</h1>
+      <p class="tagline">Dynamic visuals powered by CSS & JavaScript</p>
+    </header>
+
+    <!-- Control Panel -->
+    <section class="controls">
+      <label for="citySelect">Choose a city:</label>
+      <select id="citySelect" class="select">
+        <option value="">-- Select City --</option>
+        <option value="nairobi">Nairobi, KE</option>
+        <option value="tokyo">Tokyo, JP</option>
+        <option value="new-york">New York, US</option>
+        <option value="sydney">Sydney, AU</option>
+        <option value="oslo">Oslo, NO</option>
+      </select>
+      <button id="fetchBtn" class="btn">Get Weather</button>
+    </section>
+
+    <!-- Loading Spinner -->
+    <div id="loading" class="loading hidden">
+      <div class="spinner"></div>
+      <p>Analyzing atmospheric conditions...</p>
+    </div>
+
+    <!-- Weather Display -->
+    <section id="weatherCard" class="weather-card hidden">
+
+      <!-- Animated Background Layer -->
+      <div id="weatherScene" class="scene"></div>
+
+      <!-- Foreground Content -->
+      <div class="content">
+        <h2 id="cityName">City Name</h2>
+        <div class="temp-row">
+          <span id="tempValue" class="temp">--°C</span>
+          <span id="condition" class="condition">Condition</span>
+        </div>
+        <p id="advice" class="advice"></p>
+      </div>
+
+      <!-- Close Button -->
+      <button id="closeBtn" class="close-btn">×</button>
+    </section>
+
+    <!-- Status Bar -->
+    <footer id="statusBar" class="status-bar">Ready to animate the weather.</footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
